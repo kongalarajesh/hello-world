@@ -6,4 +6,7 @@ node('master') {
     stage('package'){
         sh 'mvn package'
     }
+    stage('archieve'){
+    archiveArtifacts 'target/*.war'
+    }
 }
